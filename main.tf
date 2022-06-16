@@ -39,7 +39,7 @@ resource "aws_instance" "Managed_nodes" {
 }
 
 resource "aws_security_group" "tf-sec-gr" {
-    name = "project208-sec-gr"
+    name = "project208-sec-gr-new"
     tags = {
       Name = "project208-sec-gr"
     }
