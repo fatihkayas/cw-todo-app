@@ -28,7 +28,7 @@ resource "aws_instance" "Managed_nodes" {
    instance_type = "t2.micro"
    key_name = "himmel"
    vpc_security_group_ids = [aws_security_group.tf-sec-gr.id]
-   iam_instance_profile = "jenkins-project-profile3"
+   iam_instance_profile = "jenkins-project-profile321"
    tags {
      Name = "ansible_${element(var.tags, count.index)}"
      stack = "ansible_project"
@@ -39,7 +39,7 @@ resource "aws_instance" "Managed_nodes" {
 }
 
 resource "aws_security_group" "tf-sec-gr" {
-    name = "project208-sec-gr-selim"
+    name = "project208-sec-gr"
     tags = {
       Name = "project208-sec-gr"
     }
