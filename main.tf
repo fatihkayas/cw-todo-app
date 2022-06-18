@@ -29,7 +29,7 @@ resource "aws_instance" "Managed_nodes" {
    key_name = "himmel"
    vpc_security_group_ids = [aws_security_group.tf-sec-gr.id]
    iam_instance_profile = "jenkins-project-profile321"
-   tags {
+   tags = {
      Name = "ansible_${element(var.tags, count.index)}"
      stack = "ansible_project"
      enviroment = "development"
