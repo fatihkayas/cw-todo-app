@@ -62,7 +62,7 @@
         append: yes
 
     - name: Start Docker service
-      service:
+      systemd:
         name: docker
         state: started
         enabled: yes
