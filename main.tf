@@ -23,7 +23,7 @@ variable "tags" {
 }
 
 resource "aws_instance" "managed_nodes" {
-   ami = "ami-0022f774911c1d690"
+   ami = "ami-0f095f89ae15be883"
    count = 3
    instance_type = "t2.micro"
    key_name = "himmel"
