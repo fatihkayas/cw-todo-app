@@ -32,7 +32,7 @@ resource "aws_instance" "managed_nodes" {
    tags = {
      Name = "ansible_${element(var.tags, count.index)}"
      stack = "ansible_project"
-     enviroment = "development"
+     environment = "development"
    }
 
   
