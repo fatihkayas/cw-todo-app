@@ -95,13 +95,9 @@ output "node_public_ip" {
   value = aws_instance.managed_nodes[1].public_ip
 }
 
-output "postgresql_private_ip" {
+output "postgre_private_ip" {
   value = aws_instance.managed_nodes[0].private_ip
 }
 
 
 
-
-# slm
-# kdr
-#sss
