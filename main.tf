@@ -22,7 +22,7 @@ variable "tags" {
 
 }
 
-resource "aws_instance" "Managed_nodes" {
+resource "aws_instance" "managed_nodes" {
    ami = "ami-0022f774911c1d690"
    count = 3
    instance_type = "t2.micro"
