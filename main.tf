@@ -28,7 +28,7 @@ resource "aws_instance" "Managed_nodes" {
    instance_type = "t2.micro"
    key_name = "himmel"
    vpc_security_group_ids = [aws_security_group.tf-sec-gr.id]
-   iam_instance_profile = "jenkins-project-profile321"
+   iam_instance_profile = "jenkins-project-profile322"
    tags = {
      Name = "ansible_${element(var.tags, count.index)}"
      stack = "ansible_project"
@@ -92,11 +92,11 @@ output "react_ip" {
 }
 
 output "node_public_ip" {
-  value = aws_instance.managed_nodes.public_ip
+  value = aws_instance.managed_nodes[1].public_ip
 }
 
 output "postgresql_private_ip" {
-  value = aws_instance.managed_nodes.private_ip
+  value = aws_instance.managed_nodes[0].private_ip
 }
 
 
